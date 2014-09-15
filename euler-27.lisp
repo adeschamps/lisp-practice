@@ -1,3 +1,4 @@
+;; This is incorrect
 (defun prime (n)
   ;; (format t "testing ~a for primeness~%" n)
   (loop for i from 2 to (- n 1) do

@@ -1,12 +1,10 @@
 (defun sum-of-squares (x)
-  (setq result 0)
-  (loop for i from 1 to x do
-	(setq result (+ result (* i i))))
-  result)
+  (loop for i from 1 to x summing (* i i)))
 
 (defun square-of-sum (x)
-  (setq sum (/ (* x (+ x 1)) 2))
-  (* sum sum))
+  (expt
+   (setq sum (/ (* x (+ x 1)) 2))
+   2))
 
 (defun euler-6 (x)
   (- (square-of-sum x)
